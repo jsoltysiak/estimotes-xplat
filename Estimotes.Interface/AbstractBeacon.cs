@@ -6,16 +6,18 @@ namespace Estimotes {
     public abstract class AbstractBeacon : IBeacon {
 
 
-		protected AbstractBeacon(string uuid, Proximity proximity, ushort major, ushort minor) {
+		protected AbstractBeacon(string uuid, Proximity proximity, ushort major, ushort minor, int rssi) {
 			this.Uuid = uuid;
             this.Proximity = proximity;
             this.Major = major;
 			this.Minor = minor;
+			this.Rssi = rssi;
         }
 
 
         public ushort Major { get; }
         public ushort Minor { get; }
+        public int Rssi { get; }
         public Proximity Proximity { get; }
         public string Uuid { get; }
 

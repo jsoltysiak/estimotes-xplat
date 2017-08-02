@@ -17,6 +17,7 @@ namespace Estimotes {
         public string Uuid { get; }
         public ushort Major => this.beacon.Major?.UInt16Value ?? 0;
         public ushort Minor => this.beacon.Minor?.UInt16Value ?? 0;
+        public int Rssi => (int)this.beacon.Rssi;
         public Proximity Proximity => this.beacon.Proximity.FromNative();
     }
 }

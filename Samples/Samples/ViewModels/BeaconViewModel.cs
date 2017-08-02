@@ -10,7 +10,7 @@ namespace Samples.ViewModels {
 		public BeaconViewModel(IBeacon beacon) {
 			this.Information = $"{beacon.Proximity}";
 //			this.Information = $"{beacon.Proximity} {beacon.Identifier}";
-			this.Details = $"Major: {beacon.Major} - Minor: {beacon.Minor} - ID: {beacon.Uuid}";
+			this.Details = $"Major: {beacon.Major} - Minor: {beacon.Minor} - Rssi: {beacon.Rssi} - ID: {beacon.Uuid}";
 		}
 
 

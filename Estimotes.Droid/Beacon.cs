@@ -16,6 +16,7 @@ namespace Estimotes {
         public string Uuid => this.beacon.ProximityUUID.ToString();
         public ushort Major => (ushort)this.beacon.Major;
         public ushort Minor => (ushort)this.beacon.Minor;
+        public int Rssi => this.beacon.Rssi;
 		public Proximity Proximity { get; internal set; }
 		internal DateTime LastPing { get; set; }
     }
